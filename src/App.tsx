@@ -116,7 +116,14 @@ export default function App() {
 
         <header className="topbar">
           <div className="topbar__inner">
-            <a className="brand" href="#top">
+            <a
+              className="brand"
+              href="#/app"
+              onClick={(e) => {
+                e.preventDefault();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            >
               <span className="brand__mark" aria-hidden="true" />
               <span className="brand__name">MACP Roadmap</span>
             </a>
